@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+ 
+	<title>Spong Bob</title>
+	
+	 <style>
+	
+	.button {color:red;}
+	
+	.block {
+  display: block;
+  width: 100%;
+  border: none;
+  background-color: rgba(255, 0, 0, 0);
+  color: white;
+  padding: 250px 28px;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+}
+	
+	body{
+	background-image: url("images/2.jpg");
+	background-size: cover;
+	}
+	 
+	@font-face {
+    font-family: 'BradBunR';
+    src: url('BradBunR.ttf'); 
+	}
+  
+	@keyframes ip {
+	
+	0% { transform: scale(0, 1); rotate(120deg)};
+	100% { transform: scale(1, 1); rotate(0deg)};
+	
+	}
+
+  .ip {
+	
+	font-size: 90px;
+	font-family:BradBunR;
+	color: lightblue;
+	text-shadow: 4px 0 0 #fff15c, -4px 0 0 #fff15c, 0 2px 0 #fff15c, 0 -4px 0 #fff15c, 2px 2px #fff15c, -2px -2px 0 #fff15c, 2px -2px 0 #fff15c, -2px 2px 0 #fff15c;
+	
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 0px;
+	animation-name:ip;
+	animation-duration: 2s;
+	
+	
+	};
+
+	</style>
+
+	<audio autoplay id="myAudio">
+	<source src="music1.mp3" type="audio/ogg">
+	</audio>
+<script>
+function ani() {
+  document.getElementById('ip').className = 'ip';
+}
+</script>
+
+<script>
+var x = document.getElementById("myAudio"); 
+
+function playAudio() { 
+  x.play(); 
+} 
+
+function pauseAudio() { 
+  x.pause(); 
+  
+} 
+
+</script>
+
+<button class="block" onClick="playAudio()" type="button"></button>
+
+  <script>
+  function getIP(json) {
+
+    document.write("<span class='ip'>" + json.ip);
+  }
+  </script>
+  <script src="http://api.ipify.org?format=jsonp&callback=getIP"></script>
+  </span>
+   <button class="block" onClick="playAudio()" type="button"></button>
+
+  
+</head>
