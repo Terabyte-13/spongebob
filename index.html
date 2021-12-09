@@ -57,27 +57,24 @@
 
 	</style>
 
-	<audio autoplay id="myAudio">
-	<source src="music1.mp3" type="audio/ogg">
+	<!--Musica-->
+	<audio id="reloaded3" autoplay loop> <source src="music1.mp3"  type="audio/mp3"> 
 	</audio>
+	
+			<script>
+			var music3 = document.getElementById("reloaded3");
+
+			function PlayStop() { 
+			return music3.paused ? music3.play() : music3.pause();
+			};
+			</script>
+		
+	<!--Musica-->
+
 <script>
 function ani() {
   document.getElementById('ip').className = 'ip';
 }
-</script>
-
-<script>
-var x = document.getElementById("myAudio"); 
-
-function playAudio() { 
-  x.play(); 
-} 
-
-function pauseAudio() { 
-  x.pause(); 
-  
-} 
-
 </script>
 
 <button class="block" onClick="playAudio()" type="button"></button>
@@ -90,7 +87,6 @@ function pauseAudio() {
   </script>
   <script src="https://api.ipify.org?format=jsonp&callback=getIP"></script>
   </span>
-   <button class="block" onClick="playAudio()" type="button"></button>
-
+  
   
 </head>
