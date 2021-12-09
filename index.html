@@ -41,7 +41,7 @@
   .ip {
 	
 	font-size: 90px;
-	font-family:"BradBunR";
+	font-family:BradBunR;
 	color: lightblue;
 	text-shadow: 4px 0 0 #fff15c, -4px 0 0 #fff15c, 0 2px 0 #fff15c, 0 -4px 0 #fff15c, 2px 2px #fff15c, -2px -2px 0 #fff15c, 2px -2px 0 #fff15c, -2px 2px 0 #fff15c;
 	
@@ -57,27 +57,27 @@
 
 	</style>
 
-	<audio id="reloaded3" autoplay loop> <source src="audio/gamgam.mp3"  type="audio/mp3"> 
-		</audio>
-		
-		<!--Tasto Musica-->
-			<script>
-			var music3 = document.getElementById("reloaded3");
-
-			function PlayStop() { 
-			return music3.paused ? music3.play() : music3.pause();
-			};
-			</script>
-		
-		<!--Tasto Musica-->
-	
-	<input onclick="PlayStop()" type="image" src="Images/speaker.png" style="margin-left:5%; margin-top:5%; height:32px; width:32px; float:left" />
-		
-
+	<audio autoplay id="myAudio">
+	<source src="music1.mp3" type="audio/ogg">
+	</audio>
 <script>
 function ani() {
   document.getElementById('ip').className = 'ip';
 }
+</script>
+
+<script>
+var x = document.getElementById("myAudio"); 
+
+function playAudio() { 
+  x.play(); 
+} 
+
+function pauseAudio() { 
+  x.pause(); 
+  
+} 
+
 </script>
 
 <button class="block" onClick="playAudio()" type="button"></button>
@@ -90,6 +90,7 @@ function ani() {
   </script>
   <script src="https://api.ipify.org?format=jsonp&callback=getIP"></script>
   </span>
-  
+   <button class="block" onClick="playAudio()" type="button"></button>
+
   
 </head>
